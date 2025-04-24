@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Club Balear de Esgrima</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Fencing_pictogram.svg" alt="Logo de esgrima" style="height: 100px;">
+  <h1>Club Balear de Esgrima</h1>
+</header>
+  <main>
+    <section>
+      <h2>Bienvenidos</h2>
+      <p>Somos un club dedicado al arte de la esgrima en Mallorca.</p>
+    </section>
+    <section>
+      <h2>Eventos</h2>
+      <ul>
+        <li>15 de mayo - Torneo interno</li>
+        <li>1 de junio - Exhibición en el polideportivo</li>
+      </ul> 
+    </section>
+    <section>
+  <h2>Contacto</h2>
+  <p>¿Quieres unirte o preguntar algo?</p>
+  <a href="mailto:clubesgrimabalear@gmail.com" style="background: #3f72af; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Envíanos un correo</a>
+</section>
+<section>
+  <h2>Formulario de contacto</h2>
+  <form action="https://formspree.io/f/xeogqnpp" method="POST" id="contacto-form">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" name="nombre" required><br><br>
+
+    <label for="email">Correo electrónico:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea name="mensaje" rows="5" required></textarea><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+<section>
+  <h2>Noticias del club</h2>
+  <ul id="lista-noticias"></ul>
+</section>
+  </main>
+  <footer>
+    <p>Contacto: clubbaleardesgrima@gmail.com</p>
+  </footer>
+<script src="Script.js"></script>
+</body>
+</html>
