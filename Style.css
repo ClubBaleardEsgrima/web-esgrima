@@ -61,7 +61,13 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
-
+.centrado {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
 button:hover {
   background-color: #28527a;
 }
