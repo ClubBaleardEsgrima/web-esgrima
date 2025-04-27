@@ -1,9 +1,11 @@
-document.getElementById('contacto-form').addEventListener('submit', function() {
+// Mensaje de agradecimiento al enviar el formulario
+document.getElementById('contacto-form').addEventListener('submit', function(event) {
   setTimeout(() => {
     alert("¡Gracias por tu mensaje! Tu formulario ha sido enviado correctamente.");
   }, 500);
 });
 
+// Noticias del club
 const noticias = [
   {
     titulo: "¡Victoria en el torneo insular!",
@@ -17,10 +19,16 @@ const noticias = [
   }
 ];
 
+// Insertar noticias dinámicamente
 const contenedorNoticias = document.getElementById("lista-noticias");
 
-noticias.forEach(noticia => {
-  const item = document.createElement("li");
-  item.innerHTML = `<strong>${noticia.titulo}</strong><br><small>${noticia.fecha}</small><p>${noticia.resumen}</p>`;
-  contenedorNoticias.appendChild(item);
+noticias.forEach(({ titulo, fecha, resumen }) => {
+  const noticia = document.createElement("div");
+  noticia.classList.add("noticia");
+  noticia.innerHTML = `
+    <h3>${titulo}</h3>
+    <p><small>${fecha}</small></p>
+    <p>${resumen}</p>
+  `;
+  contenedorNoticias.appendChild(noticia);
 });
